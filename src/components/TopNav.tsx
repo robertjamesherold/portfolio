@@ -35,6 +35,18 @@ export const TopNav = () => {
     setMobileOpen(false);
   }, [route]);
 
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (activeMenu !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [activeMenu]);
+
   // Toggle menu via click (mobile / accessibility fallback)
   const toggleMenu = (m: MenuType) => {
     cancelClose();
