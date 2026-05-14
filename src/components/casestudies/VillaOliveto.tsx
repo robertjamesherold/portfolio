@@ -119,7 +119,7 @@ export const VillaOliveto = () => (
           <figure className="flex flex-col gap-4">
             <div className="rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1">
               <img
-                src="assets/oliveto/qualitäts-kreuz.avif"
+                src="assets/oliveto/qualitats-kreuz.avif"
                 alt="Positionierungsmatrix: Qualität vs. Design – Villa Oliveto im oberen rechten Quadranten"
                 loading="lazy"
                 decoding="async"
@@ -240,7 +240,7 @@ export const VillaOliveto = () => (
           <div className="mt-12 sm:mt-14 space-y-10 sm:space-y-12">
             {[
               {
-                kind: 'qualität',
+                kind: 'qualitat',
                 label: 'Qualität',
                 desc: 'Produktinszenierende Mood-Posts.',
               },
@@ -256,13 +256,11 @@ export const VillaOliveto = () => (
               },
             ].map((row) => (
               <div key={row.kind}>
-                <div className="flex items-baseline justify-between mb-4 pb-3 border-b border-line-subtle">
-                  <div className="flex items-baseline gap-4">
-                    <span className="mono text-[11px] tracking-[.22em] text-accent-soft uppercase">
-                      {row.label}
-                    </span>
-                    <span className="text-ink-3 text-[14px]">{row.desc}</span>
-                  </div>
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4 mb-4 pb-3 border-b border-line-subtle">
+                  <span className="mono text-[11px] tracking-[.22em] text-accent-soft uppercase">
+                    {row.label}
+                  </span>
+                  <span className="text-ink-3 text-[14px]">{row.desc}</span>
                 </div>
                 <div className="grid grid-cols-3 gap-3 sm:gap-5">
                   {[1, 2, 3].map((n) => (

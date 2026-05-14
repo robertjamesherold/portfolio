@@ -45,11 +45,11 @@ export const CaseStudyHero = ({
         </p>
       </div>
       <div className="flex justify-center items-start">
-        <div className="card-base p-7 sm:p-8 flex flex-col gap-4 h-fit w-full">
+        <div className="card-base p-7 sm:p-8 flex flex-col gap-5 sm:gap-4 h-fit w-full">
           {meta.map((m) => (
             <div
               key={m.k}
-              className="grid grid-cols-[110px_1fr] sm:grid-cols-[120px_1fr] gap-5 items-start text-[15px] text-ink-2"
+              className="flex flex-col gap-1 sm:grid sm:grid-cols-[120px_1fr] sm:gap-5 sm:items-start text-[15px] text-ink-2"
             >
               <span className="mono mono--muted text-[11px] tracking-[.16em] text-ink-3">{m.k}</span>
               <span style={{ whiteSpace: 'pre-line' }}>{m.v}</span>

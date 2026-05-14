@@ -14,15 +14,15 @@ export const Pill = ({ tone = 'primary', children }: PropsWithChildren<{ tone?: 
 
 type BtnVariant = 'primary' | 'ghost';
 export const Button = ({
-  variant = 'primary', href, children, icon,
-}: PropsWithChildren<{ variant?: BtnVariant; href?: string; icon?: ReactNode }>) => {
-  const base = 'inline-flex items-center gap-2.5 px-5 py-3.5 rounded-md font-semibold text-lg transition';
+  variant = 'primary', href, children, icon, className = '',
+}: PropsWithChildren<{ variant?: BtnVariant; href?: string; icon?: ReactNode; className?: string }>) => {
+  const base = 'inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-md font-semibold text-lg transition';
   const styles =
     variant === 'primary'
       ? 'bg-accent border border-accent-soft text-white shadow-[0_8px_24px_rgba(97,95,255,.35)] hover:bg-accent-soft'
       : 'border border-line text-ink-1 hover:border-ink-2';
   return (
-    <a href={href} className={`${base} ${styles}`}>
+    <a href={href} className={`${base} ${styles} ${className}`}>
       <span>{children}</span>
       {icon}
     </a>

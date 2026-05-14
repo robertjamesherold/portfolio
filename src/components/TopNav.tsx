@@ -104,12 +104,15 @@ export const TopNav = () => {
           <button
             className="md:hidden ml-auto text-ink-1 p-2 -mr-2"
             onClick={() => {
-              setActiveMenu(null);
-              setMobileOpen((v) => !v);
+              if (activeMenu !== null) {
+                setActiveMenu(null);
+              } else {
+                setMobileOpen((v) => !v);
+              }
             }}
             aria-label="Menu"
           >
-            {mobileOpen ? <IconClose /> : <IconMenu />}
+            {mobileOpen || activeMenu !== null ? <IconClose /> : <IconMenu />}
           </button>
         </div>
 
@@ -135,7 +138,7 @@ export const TopNav = () => {
 
         {mobile.mounted && (
           <ul
-            className={`md:hidden border-t border-line-subtle px-6 py-4 flex flex-col gap-4 bg-bg/95 origin-top transition-all duration-200 ease-out ${
+            className={`md:hidden absolute left-0 right-0 top-full border-t border-line-subtle px-6 py-4 flex flex-col gap-4 bg-bg/95 backdrop-blur-md origin-top transition-all duration-200 ease-out ${
               mobile.visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
             }`}
           >

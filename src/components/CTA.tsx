@@ -15,11 +15,11 @@ export const CTA = () => (
       <p className="m-0 text-base sm:text-lg text-ink-2 max-w-[700px]">
         Ich freue mich auf den Austausch – über UX-Konzepte, Mensch-KI-Kollaboration und alles dazwischen.
       </p>
-      <div className="mt-4 flex flex-wrap gap-3.5 justify-center">
-        <Button href="mailto:robertjamesherold@icloud.com" icon={<IconSend />}>
+      <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-3.5 justify-center w-full sm:w-auto">
+        <Button href="mailto:robertjamesherold@icloud.com" icon={<IconSend />} className="w-full sm:w-auto sm:min-w-[270px]">
           Kontakt aufnehmen
         </Button>
-        <Button variant="ghost" href="tel:+4900000000000" icon={<IconPhone />}>
+        <Button variant="ghost" href="tel:+4900000000000" icon={<IconPhone />} className="w-full sm:w-auto sm:min-w-[270px]">
           Telefonisch kontaktieren
         </Button>
       </div>

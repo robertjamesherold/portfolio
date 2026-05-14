@@ -27,11 +27,11 @@ export const Hero = () => (
           <Button href="#work" icon={<IconBriefcase />}>Projekte ansehen</Button>
           <Button variant="ghost" href="#contact" icon={<IconSend />}>Kontaktiere mich</Button>
         </div>
-        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 sm:mt-16 pt-8 border-t border-line-subtle max-w-[760px]">
+        <ul className="grid grid-cols-2 xl:grid-cols-4 gap-6 mt-12 sm:mt-16 pt-8 border-t border-line-subtle max-w-[760px]">
           {stats.map((s) => (
             <li key={s.b} className="flex flex-col gap-1">
-              <b className="text-3xl font-bold text-accent">{s.b}</b>
-              <span className="mono text-[11px] uppercase tracking-[.18em] text-ink-3">{s.s}</span>
+              <b className="text-2xl sm:text-3xl font-bold text-accent">{s.b}</b>
+              <span className="mono text-[10px] sm:text-[11px] uppercase tracking-[.18em] text-ink-3">{s.s}</span>
             </li>
           ))}
         </ul>

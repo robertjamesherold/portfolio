@@ -89,10 +89,29 @@
   .container-x { @apply mx-auto w-full max-w-[1760px] px-6 sm:px-10 lg:px-20; }
   .section-y { @apply py-20 sm:py-28 lg:py-40; }
   .mono { font-family: 'Azeret Mono', ui-monospace, monospace; letter-spacing: 0.04em; }
-  .display { @apply text-[40px] sm:text-[56px] lg:text-[80px] leading-[1.02] font-bold tracking-tighter25; text-wrap: pretty; }
-  .title { @apply text-[32px] sm:text-[44px] lg:text-[64px] leading-[1.05] font-bold tracking-tighter2; text-wrap: pretty; }
-  .lede { @apply text-base sm:text-lg leading-[1.65] text-ink-2; }
+  .display {
+    font-size: clamp(2.5rem, 1.5rem + 3.5vw, 5rem);
+    line-height: 1.02;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-wrap: pretty;
+  }
+  .title {
+    font-size: clamp(2rem, 1.25rem + 3vw, 4rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-wrap: pretty;
+  }
+  .lede {
+    font-size: clamp(1rem, 0.925rem + 0.4vw, 1.125rem);
+    line-height: 1.65;
+    @apply text-ink-2;
+  }
   .card-base { @apply bg-grouped-1 border border-line-subtle rounded-2xl px-8 py-12; }
-  .eyebrow { @apply mono inline-flex items-center gap-3 sm:gap-4 text-[11px] sm:text-[13px] tracking-[.18em] text-ink-3; }
+  .eyebrow {
+    font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+    @apply mono inline-flex items-center gap-3 sm:gap-4 tracking-[.18em] text-ink-3;
+  }
   .eyebrow-num { @apply text-accent-soft; }
 }
