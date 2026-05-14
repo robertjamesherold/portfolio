@@ -1,0 +1,52 @@
+# ─────────────── Dependencies ───────────────
+node_modules/
+
+# ─────────────── Build output ───────────────
+dist/
+build/
+*.tsbuildinfo
+
+# ─────────────── Vite / dev caches ───────────────
+.vite/
+.cache/
+*.local
+
+# ─────────────── Environment files (NEVER commit secrets) ───────────────
+.env
+.env.*
+!.env.example
+
+# ─────────────── Logs ───────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─────────────── Editor / IDE ───────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ─────────────── macOS ───────────────
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# ─────────────── Windows / Linux (falls die Repo geteilt wird) ───────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─────────────── Test / Coverage (für später) ───────────────
+coverage/
+.nyc_output/
+
