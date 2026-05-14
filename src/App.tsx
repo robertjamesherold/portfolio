@@ -20,7 +20,6 @@ import { useRoute } from './lib/router';
 const Home = () => (
   <>
     <Hero />
-    <a id="work" />
     <WorkGrid />
     <About />
     <CTA />

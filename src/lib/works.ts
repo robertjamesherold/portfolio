@@ -34,7 +34,7 @@ export const works: Work[] = [
     route: 'villa-oliveto',
     href: '/villa-oliveto',
     year: '2024',
-    context: 'Studienprojekt · Cross-Media-Webdesign',
+    context: 'Studienprojekt · Product & Social Media Design',
     title: 'Villa Oliveto',
     blurb:
       'Italienische Familientradition aus 6 Generationen, modern erzählt. Markenwelt über Produkt, Web und Social Media hinweg.',

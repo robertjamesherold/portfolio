@@ -19,7 +19,7 @@ export const CTA = () => (
         <Button href="mailto:robertjamesherold@icloud.com" icon={<IconSend />} className="w-full sm:w-auto sm:min-w-[270px]">
           Kontakt aufnehmen
         </Button>
-        <Button variant="ghost" href="tel:+4900000000000" icon={<IconPhone />} className="w-full sm:w-auto sm:min-w-[270px]">
+        <Button variant="ghost" href="tel:+4915161660444" icon={<IconPhone />} className="w-full sm:w-auto sm:min-w-[270px]">
           Telefonisch kontaktieren
         </Button>
       </div>

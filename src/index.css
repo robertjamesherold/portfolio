@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
-  html, body { @apply bg-bg text-ink-1 antialiased; }
+  html { scroll-behavior: smooth; @apply bg-bg; }
+  html, body { @apply text-ink-1 antialiased; }
   body { font-family: 'Figtree', system-ui, sans-serif; }
   /* Fixed-position gradient layer: paints once and stays in place during scroll
      instead of `background-attachment: fixed` which forces full repaints. */
@@ -17,7 +17,6 @@
     background-image:
       radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(97,95,255,.18), transparent 60%),
       radial-gradient(ellipse 1000px 500px at -10% 30%, rgba(34,211,238,.06), transparent 60%);
-    will-change: transform;
   }
   ::selection { background: rgba(97,95,255,.35); color: #fff; }
 

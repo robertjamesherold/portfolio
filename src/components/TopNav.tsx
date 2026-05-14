@@ -13,6 +13,7 @@ export const TopNav = () => {
   const mobile = useEnterExit(mobileOpen, 240);
 
   const closeTimer = useRef<number | null>(null);
+  const scrollYRef = useRef(0);
   const cancelClose = () => {
     if (closeTimer.current !== null) {
       window.clearTimeout(closeTimer.current);
@@ -38,33 +39,31 @@ export const TopNav = () => {
   // Prevent scrolling when menu is open (iOS-safe)
   useEffect(() => {
     if (activeMenu !== null) {
-      const scrollY = window.scrollY;
+      scrollYRef.current = window.scrollY;
       document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
+      document.body.style.top = `-${scrollYRef.current}px`;
       document.body.style.left = '0';
       document.body.style.right = '0';
       document.body.style.overflow = 'hidden';
     } else {
-      const scrollY = document.body.style.top;
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.left = '';
       document.body.style.right = '';
       document.body.style.overflow = '';
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-      }
+      // Disable smooth scroll temporarily to restore position instantly
+      const html = document.documentElement;
+      const prevBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      window.scrollTo(0, scrollYRef.current);
+      html.style.scrollBehavior = prevBehavior;
     }
     return () => {
-      const scrollY = document.body.style.top;
       document.body.style.position = '';
       document.body.style.top = '';
       document.body.style.left = '';
       document.body.style.right = '';
       document.body.style.overflow = '';
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-      }
     };
   }, [activeMenu]);
 
