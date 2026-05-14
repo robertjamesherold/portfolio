@@ -38,6 +38,11 @@ export default function App() {
   const [lightbox, setLightbox] = useState<LightboxState>(null);
   // const [lockedOpen, setLockedOpen] = useState(false); // Disabled with CodeScanner
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [route]);
+
   // CodeScanner handling disabled until grading is complete (2026-05-28)
   // useEffect(() => {
   //   if (route === 'codescanner') {

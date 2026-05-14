@@ -32,11 +32,7 @@ export const useRoute = (): Route => {
   const [route, setRoute] = useState<Route>(() => parse());
 
   useEffect(() => {
-    const onPopState = () => {
-      const next = parse();
-      setRoute(next);
-      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-    };
+    const onPopState = () => setRoute(parse());
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
