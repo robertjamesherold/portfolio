@@ -276,7 +276,7 @@ export const NavMenu = ({
       ref={ref}
       onMouseEnter={() => isDesktop() && onMouseEnter?.()}
       onMouseLeave={() => isDesktop() && onMouseLeave?.()}
-      className={`absolute left-0 right-0 top-full border-t border-line-subtle bg-bg/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.4)] origin-top transition-all duration-300 h-[calc(100vh-73px)] md:h-auto md:max-h-[75vh] overflow-y-auto ${
+      className={`absolute left-0 right-0 top-full border-t border-line-subtle bg-bg/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.4)] origin-top transition-all duration-300 h-[calc(100dvh-73px)] md:h-auto md:max-h-[75vh] overflow-y-auto overscroll-contain ${
         visible
           ? 'opacity-100 translate-y-0 pointer-events-auto'
           : 'opacity-0 -translate-y-3 pointer-events-none'

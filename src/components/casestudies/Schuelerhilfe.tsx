@@ -138,7 +138,6 @@ export const Schuelerhilfe = () => (
               <img
                 src={`assets/av-medien/szene_${num}.avif`}
                 alt={`Storyboard Szene ${i + 1}`}
-                loading="lazy"
                 decoding="async"
                 className="block w-full h-auto"
                 style={{ aspectRatio: '16/9', objectFit: 'cover' }}
