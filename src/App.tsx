@@ -120,7 +120,7 @@ export default function App() {
   return (
     <>
       <TopNav />
-      <main>
+      <main className="pt-[57px] sm:pt-[61px]">
         {/* Keyed wrapper triggers the route-enter animation on every change */}
         <div key={route} className="route-enter">
           {route === 'home' && <Home />}

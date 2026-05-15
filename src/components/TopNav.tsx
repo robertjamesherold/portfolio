@@ -75,7 +75,7 @@ export const TopNav = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-bg/70 border-b border-line-subtle">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-bg/70 border-b border-line-subtle">
         <div className="mx-auto max-w-[1760px] px-6 sm:px-10 lg:px-20 py-4 flex items-center">
           <a
             href="/"
