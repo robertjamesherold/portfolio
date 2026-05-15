@@ -68,7 +68,7 @@ export const VillaOliveto = () => (
     <CaseStudySection
       num="02"
       label="ZIELGRUPPE & POSITIONIERUNG"
-      title="Marcel & Sandra – zwei Wege, eine Marke"
+      title="Marko & Silvia – zwei Wege, eine Marke"
       intro="Aus der strategischen Analyse entstanden zwei Personas, die das Käuferspektrum abdecken."
     >
       <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
@@ -76,7 +76,7 @@ export const VillaOliveto = () => (
           <div className="mono text-[11px] tracking-[.18em] text-accent-soft uppercase">
             Persona 01
           </div>
-          <h3 className="text-2xl font-bold tracking-tightish">Marcel</h3>
+          <h3 className="text-2xl font-bold tracking-tightish">Marko</h3>
           <p className="text-ink-2 text-[15px] leading-relaxed">
             Lifestyle-orientierter Genießer mit hohem Lebensstandard. Bereit, für Qualität
             mehr zu bezahlen, sofern Optik und Geschmack überzeugen.
@@ -86,7 +86,7 @@ export const VillaOliveto = () => (
           <div className="mono text-[11px] tracking-[.18em] text-accent-soft uppercase">
             Persona 02
           </div>
-          <h3 className="text-2xl font-bold tracking-tightish">Sandra</h3>
+          <h3 className="text-2xl font-bold tracking-tightish">Silvia</h3>
           <p className="text-ink-2 text-[15px] leading-relaxed">
             Sterneköchin – fachlich anspruchsvoll. Will durch Authentizität und Qualität
             überzeugt werden, nicht durch Marketing.
