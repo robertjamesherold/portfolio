@@ -5,16 +5,14 @@ import { WorkGrid } from './components/WorkGrid';
 import { About } from './components/About';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
-// CodeScanner case study is currently disabled (bachelor thesis still being graded
-// until 2026-05-28). Re-enable by uncommenting the route type, imports, and routing logic below.
-// import { CodeScannerCaseStudy } from './components/casestudies/CodeScanner';
+import { CodeScannerCaseStudy } from './components/casestudies/CodeScanner';
 import { VillaOliveto } from './components/casestudies/VillaOliveto';
 import { GardenConnect } from './components/casestudies/GardenConnect';
 import { Schuelerhilfe } from './components/casestudies/Schuelerhilfe';
 import { Impressum } from './components/Impressum';
 import { Datenschutz } from './components/Datenschutz';
 import { Lightbox, type LightboxState } from './components/Lightbox';
-// import { LockedModal } from './components/LockedModal'; // Disabled with CodeScanner
+import { LockedModal } from './components/LockedModal';
 import { useRoute } from './lib/router';
 
 const Home = () => (
@@ -36,27 +34,18 @@ const isZoomable = (im: HTMLImageElement) => {
 export default function App() {
   const route = useRoute();
   const [lightbox, setLightbox] = useState<LightboxState>(null);
-  // const [lockedOpen, setLockedOpen] = useState(false); // Disabled with CodeScanner
+  const [lockedOpen, setLockedOpen] = useState(false);
 
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [route]);
 
-  // CodeScanner handling disabled until grading is complete (2026-05-28)
-  // useEffect(() => {
-  //   if (route === 'codescanner') {
-  //     setLockedOpen(true);
-  //     window.location.hash = '/';
-  //   }
-  // }, [route]);
-
-  // Locked modal event listener disabled with CodeScanner
-  // useEffect(() => {
-  //   const onLocked = () => setLockedOpen(true);
-  //   window.addEventListener('show-locked-modal', onLocked);
-  //   return () => window.removeEventListener('show-locked-modal', onLocked);
-  // }, []);
+  useEffect(() => {
+    const onLocked = () => setLockedOpen(true);
+    window.addEventListener('show-locked-modal', onLocked);
+    return () => window.removeEventListener('show-locked-modal', onLocked);
+  }, []);
 
   // Scroll-reveal: any element with .reveal in <main> fades up when entering viewport.
   // Uses one shared IntersectionObserver and a MutationObserver to pick up new
@@ -124,7 +113,7 @@ export default function App() {
         {/* Keyed wrapper triggers the route-enter animation on every change */}
         <div key={route} className="route-enter">
           {route === 'home' && <Home />}
-          {/* {route === 'codescanner' && <CodeScannerCaseStudy />} */}
+          {route === 'codescanner' && <CodeScannerCaseStudy />}
           {route === 'villa-oliveto' && <VillaOliveto />}
           {route === 'garden-connect' && <GardenConnect />}
           {route === 'schuelerhilfe' && <Schuelerhilfe />}
@@ -141,7 +130,7 @@ export default function App() {
           setLightbox((s) => (s ? { ...s, index: next } : s))
         }
       />
-      {/* <LockedModal open={lockedOpen} onClose={() => setLockedOpen(false)} /> */}
+      <LockedModal open={lockedOpen} onClose={() => setLockedOpen(false)} />
     </>
   );
 }

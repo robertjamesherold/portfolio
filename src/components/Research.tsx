@@ -8,23 +8,23 @@ const statCards = [
 
 const personas = [
   {
-    name: 'Alex (28)', role: 'Junior Frontend Developer', img: 'assets/codescanner/alex.webp',
+    name: 'Alex (28)', role: 'Junior Frontend Developer', img: 'assets/codescanner/alex.avif',
     quote: 'KI-Code spart mir Zeit – aber ich weiß oft nicht, ob ich ihm vertrauen kann.',
     desc: 'Nutzt KI als tägliches Werkzeug, hat aber Unsicherheiten beim Bewerten der Ausgaben. Braucht klare Erklärungen und Handlungsführung statt langer Findings-Listen.',
   },
   {
-    name: 'Sarah (34)', role: 'Senior Frontend Developer & Tech Lead', img: 'assets/codescanner/sarah.webp',
+    name: 'Sarah (34)', role: 'Senior Frontend Developer & Tech Lead', img: 'assets/codescanner/sarah.avif',
     quote: 'KI-Output ist eine Diskussionsgrundlage – nicht die Antwort.',
     desc: 'Sieht KI-Code als Diskussionsgrundlage und braucht effiziente Risiko-Triage für ihr Team. Erwartet Severity-Stufen, Kontext und priorisierte nächste Schritte.',
   },
 ];
 
 export const Research = () => (
-  <section className="section-y container-x">
+  <section className="section-y container-x reveal">
     <SectionHeading
       num="02" label="RESEARCH & ERKENNTNISSE"
-      title="Was die Evaluation gezeigt hat"
-      sub="Das finale Konzept wurde mit zwei Methoden evaluiert: einer thematischen Analyse nach Braun & Clarke und einer heuristischen Evaluation nach Nielsen."
+      title="Was die Forschung ergeben hat"
+      sub="121 befragte Entwicklerinnen und Entwickler, eine systematische Konkurrenzanalyse von acht Tools und zwei Personas, die das Spektrum der Zielgruppe aufspannen."
     />
     <div className="grid sm:grid-cols-3 gap-6 lg:gap-8 mt-12">
       {statCards.map((s) => (
@@ -55,12 +55,12 @@ export const Research = () => (
       {personas.map((p) => (
         <Card key={p.name} className="flex flex-col gap-5 p-8">
           <header className="flex gap-5 items-center">
-            <div className="w-[144px] h-[144px] rounded-full overflow-hidden border border-line">
+            <div className="flex-none w-24 h-24 sm:w-[120px] sm:h-[120px] xl:w-[144px] xl:h-[144px] rounded-full overflow-hidden border border-line">
               <img src={p.img} alt="" className="w-full h-full object-cover" data-no-zoom/>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-xl sm:text-[38px] font-bold m-0">{p.name}</h3>
-              <p className="text-ink-3 text-2xl m-0">{p.role}</p>
+            <div className="flex flex-col gap-1.5 sm:gap-2.5 min-w-0">
+              <h3 className="text-2xl lg:text-[32px] xl:text-[38px] font-bold m-0 leading-tight">{p.name}</h3>
+              <p className="text-ink-3 text-base lg:text-lg xl:text-2xl m-0 leading-snug">{p.role}</p>
             </div>
           </header>
           <blockquote className="m-0 text-lg leading-snug border-l-2 border-accent pl-4 italic">„{p.quote}"</blockquote>

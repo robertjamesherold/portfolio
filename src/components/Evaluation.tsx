@@ -19,9 +19,9 @@ const next = [
 const principles = ['Risiken sichtbar machen', 'Erklärbarkeit erhöhen', 'Vertrauen kalibrieren', 'Review priorisieren', 'Workflow integrieren'];
 
 export const Evaluation = () => (
-  <section className="section-y container-x">
+  <section className="section-y container-x reveal">
     <SectionHeading
-      num="07" label="EVALUATION & REFLEXION"
+      num="08" label="EVALUATION & REFLEXION"
       title="Was die Evaluation gezeigt hat"
       sub="Das finale Konzept wurde mit zwei Methoden evaluiert: einer thematischen Analyse nach Braun & Clarke und einer heuristischen Evaluation nach Nielsen."
     />

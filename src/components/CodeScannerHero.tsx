@@ -12,11 +12,13 @@ const meta: { k: string; v: string }[] = [
 ];
 
 const sliderImages = [
-  'assets/Macbook.webp',
-  'assets/Macbook-1.webp',
-  'assets/Macbook-2.webp',
-  'assets/Macbook-3.webp',
+  'assets/codescanner/hero_01',
+  'assets/codescanner/hero_02',
+  'assets/codescanner/hero_03',
 ];
+const SLIDER_WIDTHS = [400, 800, 1200, 1600];
+const SLIDER_SRCSET = (base: string) =>
+  SLIDER_WIDTHS.map((w) => `${base}-${w}.avif ${w}w`).join(', ');
 
 const SLIDES_VISIBLE = 2;
 const COPIES = 3;
@@ -71,9 +73,17 @@ const ImageSlider = () => {
           }}
           onTransitionEnd={handleTransitionEnd}
         >
-          {trackImages.map((src, i) => (
+          {trackImages.map((base, i) => (
             <div key={i} className="shrink-0 px-3 lg:px-4" style={{ width: slideWidth }}>
-              <img src={src} alt="CodeScanner Screen" className="rounded-lg w-full" />
+              <img
+                src={`${base}-1200.avif`}
+                srcSet={SLIDER_SRCSET(base)}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                alt="CodeScanner Screen"
+                loading={i < SLIDES_VISIBLE ? 'eager' : 'lazy'}
+                decoding="async"
+                className="rounded-lg w-full"
+              />
             </div>
           ))}
         </div>
@@ -100,12 +110,12 @@ const ImageSlider = () => {
 };
 
 export const CodeScannerHero = () => (
-  <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28">
+  <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28 reveal">
     <BackLink />
     <div className="mt-8 sm:mt-10">
       <Pill>BACHELORARBEIT · UX/UI · 2025</Pill>
     </div>
-    <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20 mt-10 sm:mt-12">
+    <div className="grid xl:grid-cols-[1.4fr_1fr] gap-12 xl:gap-20 mt-10 sm:mt-12">
     <div>
     <h2 className="display mt-5 sm:mt-6">CodeScanner</h2>
     <p className="text-xl sm:text-2xl text-ink-2 mt-5 max-w-[1000px] leading-snug">

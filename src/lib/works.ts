@@ -13,7 +13,6 @@ export type Work = {
 };
 
 export const works: Work[] = [
-/*
   {
     route: 'codescanner',
     href: '/codescanner',
@@ -24,12 +23,11 @@ export const works: Work[] = [
       'Ein KI-gestütztes Analyse-Tool für mehr Vertrauen in KI-generierten Code – vom Research bis zum vollständigen Designsystem.',
     disciplines: ['UX/UI Design', 'Research', 'Designsystem', 'Visual Design'],
     image: {
-      src: 'assets/codescanner/thumbnail.avif',
+      src: 'assets/codescanner/prototyp_04-1200.avif',
       alt: 'CodeScanner Dashboard auf MacBook',
       objectPosition: 'center',
     },
-    locked: true,
-},*/
+  },
   {
     route: 'villa-oliveto',
     href: '/villa-oliveto',

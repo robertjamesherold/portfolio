@@ -1,4 +1,4 @@
-import { Card, Eyebrow, Subheading } from './atoms';
+import { Card, Eyebrow, ResponsiveImg, Subheading } from './atoms';
 
 const methods = [
   { n: '01', t: 'Informationsarchitektur', d: 'Inhalte und Bearbeitungsschritte strukturieren – als Grundlage für jeden weiteren Designschritt.' },
@@ -8,7 +8,7 @@ const methods = [
 ];
 
 export const Methodik = () => (
-  <section id="process" className="section-y container-x">
+  <section id="process" className="section-y container-x reveal">
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
       <div>
         <Eyebrow num="03" label="METHODIK" />
@@ -22,7 +22,13 @@ export const Methodik = () => (
     </div>
 
     <figure className="mt-16 sm:mt-20 mb-10">
-      <img src="assets/methodik-diagram.webp" alt="Methodik Diagramm" className="mx-auto w-full" />
+      <ResponsiveImg
+        base="assets/codescanner/methodik"
+        sizes="(min-width: 1760px) 1720px, 100vw"
+        alt="Methodik Diagramm"
+        className="mx-auto w-full"
+        data-no-zoom
+      />
       <figcaption className="text-ink-3 text-sm text-center mt-6 sm:mt-8 max-w-[900px] mx-auto leading-relaxed">
         KI-gestützte Ideation wurde als durchgängig einsetzbare Methode eingebettet – nicht als autonomer Entwurf,
         sondern als unterstützender Schritt für Interface-Ideen, Benennungen und Strukturvarianten.

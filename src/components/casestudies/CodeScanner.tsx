@@ -4,6 +4,7 @@ import { Research } from '../Research';
 import { Methodik } from '../Methodik';
 import { IterativerProzess } from '../IterativerProzess';
 import { Loesung } from '../Loesung';
+import { Prototyp } from '../Prototyp';
 import { DesignSystem } from '../DesignSystem';
 import { Evaluation } from '../Evaluation';
 import { Fazit } from '../Fazit';
@@ -17,6 +18,7 @@ export const CodeScannerCaseStudy = () => (
     <Methodik />
     <IterativerProzess />
     <Loesung />
+    <Prototyp />
     <DesignSystem />
     <Evaluation />
     <Fazit />

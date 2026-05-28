@@ -1,4 +1,4 @@
-import { Card, Caption, SectionHeading, Subheading } from './atoms';
+import { Card, Caption, ResponsiveImg, SectionHeading, Subheading } from './atoms';
 
 type Tone = 'red' | 'amber' | 'cyan' | 'lime';
 const toneText: Record<Tone, string> = {
@@ -19,14 +19,14 @@ const versions: { v: string; tone: Tone; label: string; title: string; desc: str
 ];
 
 export const IterativerProzess = () => (
-  <section className="section-y container-x">
+  <section className="section-y container-x reveal">
     <SectionHeading
       num="04" label="ITERATIVER PROZESS"
       title="Vier Versionen, vier Erkenntnisstufen"
       sub="Vom ersten explorativen Prototyp bis zum finalen Konzept entstanden vier vollständige Versionen – jede mit eigener Stärken-Schwächen-Analyse, dokumentiert und kritisch bewertet."
     />
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 mb-16">
+    <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 mb-16">
       {versions.map((v) => (
         <Card key={v.v} className="flex flex-col gap-3 p-7">
           <span className={`self-start inline-flex items-center justify-center px-2.5 py-1 rounded-md mono text-[12px] font-semibold border ${toneTag[v.tone]}`}>
@@ -43,7 +43,13 @@ export const IterativerProzess = () => (
     </div>
 
     <figure className="flex justify-center">
-      <img src="assets/iterativer-prozess.webp" alt="Iterativer Prozess Diagramm" className="w-full" />
+      <ResponsiveImg
+        base="assets/codescanner/iteration_01"
+        sizes="(min-width: 1760px) 1720px, 100vw"
+        alt="Iterativer Prozess Diagramm"
+        className="w-full"
+        data-no-zoom
+      />
     </figure>
 
     <Subheading>Entwicklung des Prototyps</Subheading>
@@ -53,7 +59,12 @@ export const IterativerProzess = () => (
           <span className="w-2.5 h-2.5 rounded-full bg-crit shadow-[0_0_8px_#FB2C36]" />
           <span className="mono text-crit">Variante 1</span>
         </div>
-        <img src="assets/variant-v1.webp" alt="Variante 1" className="rounded-lg border border-line-subtle" />
+        <ResponsiveImg
+          base="assets/codescanner/iteration_02"
+          sizes="(min-width: 768px) 50vw, 100vw"
+          alt="Variante 1"
+          className="rounded-lg border border-line-subtle"
+        />
         <p className="text-ink-3 text-sm">Exploratives Modul-Layout. Sieben Bereiche, kein klarer Einstiegspunkt.</p>
       </Card>
       <Card className="flex flex-col gap-4 p-6">
@@ -61,7 +72,12 @@ export const IterativerProzess = () => (
           <span className="w-2.5 h-2.5 rounded-full bg-ok shadow-[0_0_8px_#BCF85B]" />
           <span className="mono text-ok">Variante 4</span>
         </div>
-        <img src="assets/variant-v4.webp" alt="Variante 4" className="rounded-lg border border-line-subtle" />
+        <ResponsiveImg
+          base="assets/codescanner/iteration_03"
+          sizes="(min-width: 768px) 50vw, 100vw"
+          alt="Variante 4"
+          className="rounded-lg border border-line-subtle"
+        />
         <p className="text-ink-3 text-sm">Geführter Workflow-Einstieg. Drei Bereiche, ein empfohlener nächster Schritt.</p>
       </Card>
     </div>

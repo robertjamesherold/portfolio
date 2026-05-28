@@ -131,10 +131,10 @@ const ProjectsContent = ({
       </span>
     </a>
 
-    {/* workIndex updated: CodeScanner (was index 0) is disabled, so indices shifted */}
-    <MiniTile workIndex={0} active={currentRoute === 'villa-oliveto'} onSelect={onClose} index={2} />
-    <MiniTile workIndex={1} active={currentRoute === 'garden-connect'} onSelect={onClose} index={3} />
-    <MiniTile workIndex={2} active={currentRoute === 'schuelerhilfe'} onSelect={onClose} index={4} />
+    <MiniTile workIndex={0} active={currentRoute === 'codescanner'} onSelect={onClose} index={1} />
+    <MiniTile workIndex={1} active={currentRoute === 'villa-oliveto'} onSelect={onClose} index={2} />
+    <MiniTile workIndex={2} active={currentRoute === 'garden-connect'} onSelect={onClose} index={3} />
+    <MiniTile workIndex={3} active={currentRoute === 'schuelerhilfe'} onSelect={onClose} index={4} />
   </div>
 );
 

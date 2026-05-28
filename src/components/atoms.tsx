@@ -1,4 +1,4 @@
-import type { PropsWithChildren, ReactNode } from 'react';
+import type { ImgHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 type PillTone = 'primary' | 'amber' | 'violet';
 const pillTones: Record<PillTone, string> = {
@@ -61,3 +61,20 @@ export const Caption = ({ children, center = false }: PropsWithChildren<{ center
     {children}
   </p>
 );
+
+const DEFAULT_WIDTHS = [400, 800, 1200, 1600];
+
+type ResponsiveImgProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet'> & {
+  base: string;
+  widths?: number[];
+  sizes?: string;
+  alt: string;
+};
+
+export const ResponsiveImg = ({
+  base, widths = DEFAULT_WIDTHS, sizes = '100vw', alt, loading = 'lazy', decoding = 'async', ...rest
+}: ResponsiveImgProps) => {
+  const fallback = `${base}-${widths[widths.length - 1]}.avif`;
+  const srcSet = widths.map((w) => `${base}-${w}.avif ${w}w`).join(', ');
+  return <img src={fallback} srcSet={srcSet} sizes={sizes} alt={alt} loading={loading} decoding={decoding} {...rest} />;
+};

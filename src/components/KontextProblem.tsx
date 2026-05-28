@@ -1,7 +1,7 @@
-import { Eyebrow } from './atoms';
+import { Eyebrow, ResponsiveImg } from './atoms';
 
 export const KontextProblem = () => (
-  <section className="section-y container-x">
+  <section className="section-y container-x reveal">
     <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-20 items-center">
       <div>
         <Eyebrow num="01" label="KONTEXT & PROBLEM" />
@@ -23,7 +23,13 @@ export const KontextProblem = () => (
         </blockquote>
       </div>
       <div className="rounded-2xl overflow-hidden ">
-        <img src="assets/kontext-problem.webp" alt="Kontext und Problem" className="w-full" />
+        <ResponsiveImg
+          base="assets/codescanner/kontext"
+          sizes="(min-width: 1024px) 45vw, 100vw"
+          alt="Kontext und Problem"
+          className="w-full"
+          data-no-zoom
+        />
       </div>
     </div>
   </section>

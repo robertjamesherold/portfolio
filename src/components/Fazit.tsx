@@ -1,8 +1,8 @@
 export const Fazit = () => (
-  <section className="py-32 sm:py-44 lg:py-52 px-6 sm:px-10 text-center">
+  <section className="py-32 sm:py-44 lg:py-52 px-6 sm:px-10 text-center reveal">
     <div className="max-w-[1300px] mx-auto flex flex-col gap-10 sm:gap-12 items-center">
       <div className="eyebrow">
-        <span className="eyebrow-num mono">08</span>
+        <span className="eyebrow-num mono">09</span>
         <span className="text-ink-3">FAZIT</span>
       </div>
       <p className="m-0 text-[28px] sm:text-[40px] lg:text-[48px] leading-[1.25] font-semibold tracking-tightish text-ink-1" style={{ textWrap: 'balance' }}>

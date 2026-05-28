@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 export type Route =
   | 'home'
-  // | 'codescanner' // Temporarily disabled until bachelor thesis grading is complete (2026-05-28)
+  | 'codescanner'
   | 'villa-oliveto'
   | 'garden-connect'
   | 'schuelerhilfe'
@@ -11,6 +11,7 @@ export type Route =
 
 const routes: Record<string, Route> = {
   '/': 'home',
+  '/codescanner': 'codescanner',
   '/villa-oliveto': 'villa-oliveto',
   '/garden-connect': 'garden-connect',
   '/schuelerhilfe': 'schuelerhilfe',
