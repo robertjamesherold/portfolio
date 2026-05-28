@@ -3,14 +3,11 @@ import { IconMenu, IconClose } from '../lib/icons';
 import { useRoute, navigate } from '../lib/router';
 import { NavMenu, type MenuType } from './NavMenu';
 import { NavBackdrop } from './NavBackdrop';
-import { useEnterExit } from '../lib/transitions';
 
 export const TopNav = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<MenuType | null>(null);
   const route = useRoute();
   const isHome = route === 'home';
-  const mobile = useEnterExit(mobileOpen, 240);
 
   const closeTimer = useRef<number | null>(null);
   const scrollYRef = useRef(0);
@@ -33,7 +30,6 @@ export const TopNav = () => {
   // Close everything on route change
   useEffect(() => {
     setActiveMenu(null);
-    setMobileOpen(false);
   }, [route]);
 
   // Prevent scrolling when menu is open (iOS-safe)
@@ -123,16 +119,11 @@ export const TopNav = () => {
 
           <button
             className="md:hidden ml-auto text-ink-1 p-2 -mr-2"
-            onClick={() => {
-              if (activeMenu !== null) {
-                setActiveMenu(null);
-              } else {
-                setMobileOpen((v) => !v);
-              }
-            }}
+            onClick={() => setActiveMenu((cur) => (cur === null ? 'all' : null))}
             aria-label="Menu"
+            aria-expanded={activeMenu !== null}
           >
-            {mobileOpen || activeMenu !== null ? <IconClose /> : <IconMenu />}
+            {activeMenu !== null ? <IconClose /> : <IconMenu />}
           </button>
         </div>
 
@@ -155,39 +146,12 @@ export const TopNav = () => {
           onMouseEnter={cancelClose}
           onMouseLeave={scheduleClose}
         />
-
-        {mobile.mounted && (
-          <ul
-            className={`md:hidden absolute left-0 right-0 top-full border-t border-line-subtle px-6 py-4 flex flex-col gap-4 bg-bg/95 backdrop-blur-md origin-top transition-all duration-200 ease-out ${
-              mobile.visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
-            }`}
-          >
-            <li>
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileOpen(false);
-                  setActiveMenu('projects');
-                }}
-                className="block text-left text-ink-2 hover:text-ink-1 w-full"
-              >
-                Arbeitsproben
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileOpen(false);
-                  setActiveMenu('contact');
-                }}
-                className="block text-left text-ink-2 hover:text-ink-1 w-full"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
-        )}
+        <NavMenu
+          type="all"
+          open={activeMenu === 'all'}
+          currentRoute={route}
+          onClose={() => setActiveMenu(null)}
+        />
       </nav>
 
       {/* Apple-style page blur behind the open mega menu */}

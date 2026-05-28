@@ -4,7 +4,7 @@ import { navigate, type Route } from '../lib/router';
 import { IconArrowRight, IconSend, IconPhone, IconDownload } from '../lib/icons';
 import { useEnterExit } from '../lib/transitions';
 
-export type MenuType = 'projects' | 'contact';
+export type MenuType = 'projects' | 'contact' | 'all';
 
 const stagger = (i: number): CSSProperties =>
   ({ ['--i' as string]: i } as CSSProperties);
@@ -267,7 +267,8 @@ export const NavMenu = ({
 
   if (!mounted) return null;
 
-  const label = type === 'projects' ? 'Arbeitsproben' : 'Kontakt';
+  const label =
+    type === 'projects' ? 'Arbeitsproben' : type === 'contact' ? 'Kontakt' : 'Menü';
 
   const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
@@ -295,8 +296,23 @@ export const NavMenu = ({
 
         {type === 'projects' ? (
           <ProjectsContent currentRoute={currentRoute} onClose={onClose} />
-        ) : (
+        ) : type === 'contact' ? (
           <ContactContent />
+        ) : (
+          <div className="flex flex-col gap-10">
+            <section>
+              <div className="mono text-[11px] tracking-[.22em] text-ink-3 uppercase mb-5">
+                Arbeitsproben
+              </div>
+              <ProjectsContent currentRoute={currentRoute} onClose={onClose} />
+            </section>
+            <section>
+              <div className="mono text-[11px] tracking-[.22em] text-ink-3 uppercase mb-5">
+                Kontakt
+              </div>
+              <ContactContent />
+            </section>
+          </div>
         )}
       </div>
     </div>

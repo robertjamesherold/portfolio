@@ -37,13 +37,12 @@ export const Hero = () => (
         </ul>
       </div>
       <div className="flex justify-center items-center">
- 
           <img
             src="assets/common/portrait.avif"
             alt="Portrait Robert James Herold"
             decoding="async"
             data-no-zoom
-            className="w-full h-full object-cover"
+            className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-none h-auto lg:h-full object-cover"
             style={{ borderRadius: 'inherit', filter: 'saturate(.95) contrast(1.05)' }}
           />
        </div>

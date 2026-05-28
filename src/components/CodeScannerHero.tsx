@@ -20,12 +20,14 @@ const SLIDER_WIDTHS = [400, 800, 1200, 1600];
 const SLIDER_SRCSET = (base: string) =>
   SLIDER_WIDTHS.map((w) => `${base}-${w}.avif ${w}w`).join(', ');
 
-const SLIDES_VISIBLE = 2;
 const COPIES = 3;
 const TRANSITION_MS = 500;
 const trackImages = Array.from({ length: COPIES }, () => sliderImages).flat();
+const getSlidesVisible = () =>
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 640px)').matches ? 2 : 1;
 
 const ImageSlider = () => {
+  const [slidesVisible, setSlidesVisible] = useState(getSlidesVisible);
   const [index, setIndex] = useState(sliderImages.length);
   const [animating, setAnimating] = useState(true);
   const [slideWidth, setSlideWidth] = useState(0);
@@ -33,8 +35,10 @@ const ImageSlider = () => {
 
   useLayoutEffect(() => {
     const measure = () => {
+      const visible = getSlidesVisible();
+      setSlidesVisible(visible);
       if (containerRef.current) {
-        setSlideWidth(containerRef.current.offsetWidth / SLIDES_VISIBLE);
+        setSlideWidth(containerRef.current.offsetWidth / visible);
       }
     };
     measure();
@@ -80,7 +84,7 @@ const ImageSlider = () => {
                 srcSet={SLIDER_SRCSET(base)}
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 alt="CodeScanner Screen"
-                loading={i < SLIDES_VISIBLE ? 'eager' : 'lazy'}
+                loading={i < slidesVisible ? 'eager' : 'lazy'}
                 decoding="async"
                 className="rounded-lg w-full"
               />

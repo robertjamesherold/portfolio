@@ -122,12 +122,20 @@ export const DesignSystem = () => (
     <div className="grid sm:grid-cols-2 xl:grid-cols-[2fr_1.2fr_1.2fr] gap-6">
       <div className="card-base p-7 sm:col-span-2 xl:col-span-1">
         <h4 className="m-0 mb-6 text-sm text-ink-3 font-medium">Spacing Scale</h4>
-        <div className="grid grid-cols-12 gap-2 items-end h-40">
+        <div className="grid grid-cols-12 gap-2 items-end h-32">
           {spacingScale.map(([n, px]) => (
-            <div key={n} className="flex flex-col items-center gap-1.5 justify-end h-full">
+            <div key={n} className="flex justify-center items-end h-full min-w-0">
               <div className="w-[18px] bg-accent-soft rounded-sm" style={{ height: `${Math.min(parseInt(px), 128)}px` }} />
-              <b className="text-[13px] font-semibold mt-1">{n}</b>
-              <span className="mono text-[10px] text-ink-3">{px}px</span>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-12 gap-2 mt-3">
+          {spacingScale.map(([n, px]) => (
+            <div key={n} className="flex flex-col items-center gap-0.5 min-w-0">
+              <b className="text-[13px] font-semibold">{n}</b>
+              <span className="mono text-[9px] sm:text-[10px] text-ink-3 tracking-tight">
+                {px}<span className="hidden sm:inline">px</span>
+              </span>
             </div>
           ))}
         </div>
