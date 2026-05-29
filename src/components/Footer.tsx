@@ -14,7 +14,9 @@ export const Footer = () => {
           <nav className="flex items-center gap-6 text-[14px]">
             <a
               href="/cv-robert-james-herold.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lebenslauf als PDF in neuem Tab öffnen"
               className="text-ink-3 hover:text-ink-1 transition"
             >
               Lebenslauf (PDF)

@@ -8,6 +8,7 @@ import { Prototyp } from '../Prototyp';
 import { DesignSystem } from '../DesignSystem';
 import { Evaluation } from '../Evaluation';
 import { Fazit } from '../Fazit';
+import { DownloadArbeit } from '../DownloadArbeit';
 import { NextProjectCTA } from './shared';
 
 export const CodeScannerCaseStudy = () => (
@@ -22,6 +23,7 @@ export const CodeScannerCaseStudy = () => (
     <DesignSystem />
     <Evaluation />
     <Fazit />
+    <DownloadArbeit />
     <NextProjectCTA />
   </>
 );

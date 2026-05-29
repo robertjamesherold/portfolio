@@ -1,4 +1,4 @@
-import type { ImgHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import type { AnchorHTMLAttributes, ImgHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 type PillTone = 'primary' | 'amber' | 'violet';
 const pillTones: Record<PillTone, string> = {
@@ -13,16 +13,20 @@ export const Pill = ({ tone = 'primary', children }: PropsWithChildren<{ tone?: 
 );
 
 type BtnVariant = 'primary' | 'ghost';
+type ButtonAnchorProps = Pick<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  'target' | 'rel' | 'download' | 'aria-label'
+>;
 export const Button = ({
-  variant = 'primary', href, children, icon, className = '',
-}: PropsWithChildren<{ variant?: BtnVariant; href?: string; icon?: ReactNode; className?: string }>) => {
+  variant = 'primary', href, children, icon, className = '', ...anchorProps
+}: PropsWithChildren<{ variant?: BtnVariant; href?: string; icon?: ReactNode; className?: string }> & ButtonAnchorProps) => {
   const base = 'inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-md font-semibold text-lg transition';
   const styles =
     variant === 'primary'
       ? 'bg-accent border border-accent-soft text-white shadow-[0_8px_24px_rgba(97,95,255,.35)] hover:bg-accent-soft'
       : 'border border-line text-ink-1 hover:border-ink-2';
   return (
-    <a href={href} className={`${base} ${styles} ${className}`}>
+    <a href={href} className={`${base} ${styles} ${className}`} {...anchorProps}>
       <span>{children}</span>
       {icon}
     </a>

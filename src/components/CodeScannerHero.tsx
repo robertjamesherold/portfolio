@@ -116,8 +116,9 @@ const ImageSlider = () => {
 export const CodeScannerHero = () => (
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28 reveal">
     <BackLink />
-    <div className="mt-8 sm:mt-10">
+    <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3">
       <Pill>BACHELORARBEIT · UX/UI · 2025</Pill>
+      <Pill tone="amber">BEWERTET MIT 1,0</Pill>
     </div>
     <div className="grid xl:grid-cols-[1.4fr_1fr] gap-12 xl:gap-20 mt-10 sm:mt-12">
     <div>

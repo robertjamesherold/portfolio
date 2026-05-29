@@ -133,8 +133,7 @@ const ProjectsContent = ({
 
     <MiniTile workIndex={0} active={currentRoute === 'codescanner'} onSelect={onClose} index={1} />
     <MiniTile workIndex={1} active={currentRoute === 'villa-oliveto'} onSelect={onClose} index={2} />
-    <MiniTile workIndex={2} active={currentRoute === 'garden-connect'} onSelect={onClose} index={3} />
-    <MiniTile workIndex={3} active={currentRoute === 'schuelerhilfe'} onSelect={onClose} index={4} />
+    <MiniTile workIndex={2} active={currentRoute === 'schuelerhilfe'} onSelect={onClose} index={3} />
   </div>
 );
 
@@ -147,7 +146,9 @@ const ContactCard = ({
   value,
   hint,
   index,
-  download,
+  target,
+  rel,
+  ariaLabel,
 }: {
   href: string;
   icon: ReactNode;
@@ -155,11 +156,15 @@ const ContactCard = ({
   value: string;
   hint: string;
   index: number;
-  download?: boolean;
+  target?: string;
+  rel?: string;
+  ariaLabel?: string;
 }) => (
   <a
     href={href}
-    download={download}
+    target={target}
+    rel={rel}
+    aria-label={ariaLabel}
     style={stagger(index)}
     className="menu-item-stagger group relative flex flex-col rounded-xl overflow-hidden border border-line-subtle bg-grouped-1 hover:border-accent/50 hover:-translate-y-0.5 transition p-6 sm:p-7 min-h-[180px]"
   >
@@ -228,10 +233,12 @@ const ContactContent = () => (
       href="/cv-robert-james-herold.pdf"
       icon={<IconDownload width={20} height={20} />}
       label="Lebenslauf"
-      value="CV herunterladen"
-      hint="PDF zum Weiterleiten an HR oder Entscheider."
+      value="Lebenslauf öffnen"
+      hint="PDF im Browser ansehen — direkt verfügbar."
       index={3}
-      download
+      target="_blank"
+      rel="noopener noreferrer"
+      ariaLabel="Lebenslauf als PDF in neuem Tab öffnen"
     />
   </div>
 );

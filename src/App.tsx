@@ -7,7 +7,6 @@ import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
 import { CodeScannerCaseStudy } from './components/casestudies/CodeScanner';
 import { VillaOliveto } from './components/casestudies/VillaOliveto';
-import { GardenConnect } from './components/casestudies/GardenConnect';
 import { Schuelerhilfe } from './components/casestudies/Schuelerhilfe';
 import { Impressum } from './components/Impressum';
 import { Datenschutz } from './components/Datenschutz';
@@ -115,7 +114,6 @@ export default function App() {
           {route === 'home' && <Home />}
           {route === 'codescanner' && <CodeScannerCaseStudy />}
           {route === 'villa-oliveto' && <VillaOliveto />}
-          {route === 'garden-connect' && <GardenConnect />}
           {route === 'schuelerhilfe' && <Schuelerhilfe />}
           {route === 'impressum' && <Impressum />}
           {route === 'datenschutz' && <Datenschutz />}

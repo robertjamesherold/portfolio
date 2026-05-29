@@ -4,7 +4,6 @@ export type Route =
   | 'home'
   | 'codescanner'
   | 'villa-oliveto'
-  | 'garden-connect'
   | 'schuelerhilfe'
   | 'impressum'
   | 'datenschutz';
@@ -13,7 +12,6 @@ const routes: Record<string, Route> = {
   '/': 'home',
   '/codescanner': 'codescanner',
   '/villa-oliveto': 'villa-oliveto',
-  '/garden-connect': 'garden-connect',
   '/schuelerhilfe': 'schuelerhilfe',
   '/impressum': 'impressum',
   '/datenschutz': 'datenschutz',

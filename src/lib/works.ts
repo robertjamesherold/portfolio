@@ -44,21 +44,6 @@ export const works: Work[] = [
     },
   },
   {
-    route: 'garden-connect',
-    href: '/garden-connect',
-    year: '2024',
-    context: 'Studienprojekt · Mobile Design',
-    title: 'Garden Connect',
-    blurb:
-      'Eine Urban-Gardening-App, die Pflanzenidentifikation, AR-Planung und lokale Community in einem System zusammenführt.',
-    disciplines: ['Mobile UX', 'iOS Design', 'AR-Konzeption', 'Prototyping'],
-    image: {
-      src: 'assets/gardenconnect/thumbnail.avif',
-      alt: 'Garden Connect – Pflanzenidentifikations-Flow auf drei iPhones',
-      objectPosition: 'center',
-    },
-  },
-  {
     route: 'schuelerhilfe',
     href: '/schuelerhilfe',
     year: '2025',
