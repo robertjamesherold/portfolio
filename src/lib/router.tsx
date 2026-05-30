@@ -18,7 +18,8 @@ const routes: Record<string, Route> = {
 };
 
 const parse = (): Route => {
-  const path = window.location.pathname;
+  // Strip a trailing slash so /codescanner and /codescanner/ both resolve.
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
   return routes[path] ?? 'home';
 };
 
