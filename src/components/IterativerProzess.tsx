@@ -1,4 +1,4 @@
-import { Card, Caption, ResponsiveImg, SectionHeading, Subheading } from './atoms';
+import { Card, ResponsiveImg, SectionHeading, Subheading } from './atoms';
 
 type Tone = 'red' | 'amber' | 'cyan' | 'lime';
 const toneText: Record<Tone, string> = {
