@@ -47,8 +47,8 @@ export const About = () => (
         <div className="absolute -inset-3 sm:-inset-4 -z-10 rounded-3xl bg-accent/10 translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4" />
         <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1">
           <img
-            src="assets/common/landscape-1200.avif"
-            srcSet="assets/common/landscape-400.avif 400w, assets/common/landscape-800.avif 800w, assets/common/landscape-1200.avif 1200w, assets/common/landscape-1600.avif 1600w"
+            src="/assets/common/landscape-1200.avif"
+            srcSet="/assets/common/landscape-400.avif 400w, /assets/common/landscape-800.avif 800w, /assets/common/landscape-1200.avif 1200w, /assets/common/landscape-1600.avif 1600w"
             sizes="(min-width: 1024px) 45vw, (min-width: 640px) 80vw, 100vw"
             alt="Robert James Herold"
             loading="lazy"

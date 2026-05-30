@@ -38,7 +38,7 @@ export const Hero = () => (
       </div>
       <div className="flex justify-center items-center">
           <img
-            src="assets/common/portrait.avif"
+            src="/assets/common/portrait.avif"
             alt="Portrait Robert James Herold"
             decoding="async"
             data-no-zoom

@@ -177,7 +177,7 @@ export const DesignSystem = () => (
       <div className="card-base p-7 sm:p-8 flex flex-col gap-5">
         <h4 className="m-0 text-sm text-ink-3 font-medium">Sidebar – erweitert & kompakt</h4>
         <ResponsiveImg
-          base="assets/codescanner/sidebar"
+          base="/assets/codescanner/sidebar"
           sizes="(min-width: 1024px) 45vw, 100vw"
           alt="Sidebar – annotierte Komponentenübersicht im erweiterten und kompakten Zustand"
           className="w-full h-auto rounded-lg"
@@ -186,7 +186,7 @@ export const DesignSystem = () => (
       <div className="card-base p-7 sm:p-8 flex flex-col gap-5">
         <h4 className="m-0 text-sm text-ink-3 font-medium">Topbar – Sicherheitsbereich, annotiert</h4>
         <ResponsiveImg
-          base="assets/codescanner/topbar"
+          base="/assets/codescanner/topbar"
           sizes="(min-width: 1024px) 45vw, 100vw"
           alt="Topbar – annotierter Sicherheitsbereich mit Back-Button, Titel, Severity-Badge und Aktionen"
           className="w-full h-auto rounded-lg"

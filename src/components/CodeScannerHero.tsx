@@ -12,9 +12,9 @@ const meta: { k: string; v: string }[] = [
 ];
 
 const sliderImages = [
-  'assets/codescanner/hero_01',
-  'assets/codescanner/hero_02',
-  'assets/codescanner/hero_03',
+  '/assets/codescanner/hero_01',
+  '/assets/codescanner/hero_02',
+  '/assets/codescanner/hero_03',
 ];
 const SLIDER_WIDTHS = [400, 800, 1200, 1600];
 const SLIDER_SRCSET = (base: string) =>

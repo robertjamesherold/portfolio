@@ -23,7 +23,7 @@ export const Methodik = () => (
 
     <figure className="mt-16 sm:mt-20 mb-10">
       <ResponsiveImg
-        base="assets/codescanner/methodik"
+        base="/assets/codescanner/methodik"
         sizes="(min-width: 1760px) 1720px, 100vw"
         alt="Methodik Diagramm"
         className="mx-auto w-full"

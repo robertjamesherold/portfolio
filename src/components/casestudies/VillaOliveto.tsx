@@ -17,7 +17,7 @@ export const VillaOliveto = () => (
       visual={
         <div className="rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
           <img
-            src="assets/oliveto/thumbnail.avif"
+            src="/assets/oliveto/thumbnail.avif"
             alt="Villa Oliveto – Cover-Slide mit goldenem Olivenbaum-Logo und Flasche"
             decoding="async"
             className="block w-full h-auto"
@@ -50,7 +50,7 @@ export const VillaOliveto = () => (
             style={{ aspectRatio: '4/5' }}
           >
             <img
-              src="assets/oliveto/bottle.avif"
+              src="/assets/oliveto/bottle.avif"
               alt="Villa Oliveto – Flasche Traditionale mit Olivenbaum-Logo"
               loading="lazy"
               decoding="async"
@@ -105,7 +105,7 @@ export const VillaOliveto = () => (
           <figure className="flex flex-col gap-4">
             <div className="rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1">
               <img
-                src="assets/oliveto/gesundes-kreuz.avif"
+                src="/assets/oliveto/gesundes-kreuz.avif"
                 alt="Positionierungsmatrix: Exklusiv vs. Gesund – Villa Oliveto im oberen rechten Quadranten"
                 loading="lazy"
                 decoding="async"
@@ -119,7 +119,7 @@ export const VillaOliveto = () => (
           <figure className="flex flex-col gap-4">
             <div className="rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1">
               <img
-                src="assets/oliveto/qualitats-kreuz.avif"
+                src="/assets/oliveto/qualitats-kreuz.avif"
                 alt="Positionierungsmatrix: Qualität vs. Design – Villa Oliveto im oberen rechten Quadranten"
                 loading="lazy"
                 decoding="async"
@@ -171,7 +171,7 @@ export const VillaOliveto = () => (
                   style={{ aspectRatio: '14/10' }}
                 >
                   <img
-                    src={`assets/oliveto/${b.src}`}
+                    src={`/assets/oliveto/${b.src}`}
                     alt={`Villa Oliveto – Flasche ${b.label}`}
                     loading="lazy"
                     decoding="async"
@@ -209,7 +209,7 @@ export const VillaOliveto = () => (
               </span>
             </div>
             <img
-              src="assets/oliveto/website.avif"
+              src="/assets/oliveto/website.avif"
               alt="Villa Oliveto – komplette Website (Full-Page-Render)"
               loading="lazy"
               decoding="async"
@@ -270,7 +270,7 @@ export const VillaOliveto = () => (
                       style={{ aspectRatio: '1/1' }}
                     >
                       <img
-                        src={`assets/oliveto/socials-${row.kind}_${n}.avif`}
+                        src={`/assets/oliveto/socials-${row.kind}_${n}.avif`}
                         alt={`Villa Oliveto – Social-Post ${row.label} ${n}`}
                         loading="lazy"
                         decoding="async"
@@ -289,7 +289,7 @@ export const VillaOliveto = () => (
             </h4>
             <div className="flex justify-center">
               <img
-                src="assets/oliveto/instagram.avif"
+                src="/assets/oliveto/instagram.avif"
                 alt="Villa Oliveto – Instagram-Auftritt"
                 loading="lazy"
                 decoding="async"

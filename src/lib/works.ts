@@ -23,7 +23,7 @@ export const works: Work[] = [
       'Ein KI-gestütztes Analyse-Tool für mehr Vertrauen in KI-generierten Code – vom Research bis zum vollständigen Designsystem.',
     disciplines: ['UX/UI Design', 'Research', 'Designsystem', 'Visual Design'],
     image: {
-      src: 'assets/codescanner/prototyp_04-1200.avif',
+      src: '/assets/codescanner/prototyp_04-1200.avif',
       alt: 'CodeScanner Dashboard auf MacBook',
       objectPosition: 'center',
     },
@@ -38,7 +38,7 @@ export const works: Work[] = [
       'Italienische Familientradition aus 6 Generationen, modern erzählt. Markenwelt über Produkt, Web und Social Media hinweg.',
     disciplines: ['Brand Design', 'Webdesign', 'Social Media', 'Packaging'],
     image: {
-      src: 'assets/oliveto/thumbnail.avif',
+      src: '/assets/oliveto/thumbnail.avif',
       alt: 'Villa Oliveto – Cover-Slide mit Logo und Flasche',
       objectPosition: 'center',
     },
@@ -53,7 +53,7 @@ export const works: Work[] = [
       'Ein 30-Sekunden-Werbespot für die Schülerhilfe – von Plot über Drehbuch und Storyboard bis zum fertigen Animatic.',
     disciplines: ['Konzept & Drehbuch', 'Storyboard', 'Animation', 'Schnitt'],
     image: {
-      src: 'assets/av-medien/thumbnail.avif',
+      src: '/assets/av-medien/thumbnail.avif',
       alt: 'Schülerhilfe – Animatic Schlüsselmoment',
       objectPosition: 'center',
     },

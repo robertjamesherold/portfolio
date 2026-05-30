@@ -46,7 +46,7 @@ export const IterativerProzess = () => (
     <div className="grid xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-10 items-start">
       <figure className="m-0">
         <ResponsiveImg
-          base="assets/codescanner/iteration_01"
+          base="/assets/codescanner/iteration_01"
           sizes="(min-width: 1280px) 50vw, 100vw"
           alt="Iterativer Prozess Diagramm"
           className="w-full"
@@ -60,7 +60,7 @@ export const IterativerProzess = () => (
             <span className="mono text-crit">Variante 1</span>
           </div>
           <ResponsiveImg
-            base="assets/codescanner/iteration_02"
+            base="/assets/codescanner/iteration_02"
             sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
             alt="Variante 1"
             className="rounded-lg border border-line-subtle"
@@ -73,7 +73,7 @@ export const IterativerProzess = () => (
             <span className="mono text-ok">Variante 4</span>
           </div>
           <ResponsiveImg
-            base="assets/codescanner/iteration_03"
+            base="/assets/codescanner/iteration_03"
             sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
             alt="Variante 4"
             className="rounded-lg border border-line-subtle"

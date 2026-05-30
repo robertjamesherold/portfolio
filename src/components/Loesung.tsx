@@ -74,19 +74,19 @@ export const Loesung = () => (
 
     <Item ix="5.1" ixTone="blue" label="BEREINIGEN" title="Struktur vor Sicherheit"
       lede="Bevor Sicherheits- oder Performance-Probleme analysiert werden, geht es um die Grundlage: Redundanz, Ballast und Strukturklarheit. Doppelte Dateien, ungenutzte Pakete, inkonsistente Benennungen werden gebündelt und mit dreistufiger Konfidenzklassifikation versehen – damit klar ist, was sicher automatisierbar ist und was menschliches Urteil braucht."
-      imgBase="assets/codescanner/prototyp_01"
+      imgBase="/assets/codescanner/prototyp_01"
     />
     <Caption>Die Bereinigungsphase reduziert Komplexität, bevor sicherheits- und qualitätskritische Analysen ansetzen.</Caption>
 
     <Item ix="5.2" ixTone="cyan" label="ABSICHERN" title="Sicherheitsbefunde mit Kontext" reverse
       lede="Im Sicherheitsbereich werden Befunde nach Severity-Stufen (Kritisch › Hoch › Mittel › Niedrig) gegliedert und mit den offiziellen CWE-Codes (Common Weakness Enumeration) der MITRE-Klassifikation verknüpft. Jeder Befund zeigt Vorher-/Nachher-Code-Vergleich, betroffene Datei und Zeilennummer sowie eine kontextbezogene Erklärung des Problems – damit Nutzende nicht nur sehen was, sondern auch warum."
-      imgBase="assets/codescanner/prototyp_02"
+      imgBase="/assets/codescanner/prototyp_02"
     />
     <Caption>Pattern-basierte Befundgruppierung mit dateibezogener Detailansicht. Der direkte Vorher-/Nachher-Vergleich macht die Wirkung jeder Änderung nachvollziehbar.</Caption>
 
     <Item ix="5.3" ixTone="violet" label="OPTIMIEREN" title="Qualität schrittweise verbessern"
       lede="Im Optimierungsbereich liegt der Fokus weniger auf Kritikalität, sondern auf schrittweiser Verbesserung. Bundle-Größe, Performance, Architektur, API-Effizienz – jede Kategorie wird in eigener Tiefe behandelt, mit demselben Vertrauensprinzip wie in den vorherigen Schritten: Vorschläge, keine Vorgaben."
-      imgBase="assets/codescanner/prototyp_03"
+      imgBase="/assets/codescanner/prototyp_03"
     />
     <Caption>Der Optimierungsbereich übernimmt die Logik der vorherigen Schritte – aber mit dem Fokus auf inkrementelle Qualitätssteigerung statt Kritikalität.</Caption>
 
@@ -101,7 +101,7 @@ export const Loesung = () => (
         </p>
       </div>
       <ResponsiveImg
-        base="assets/codescanner/prototyp_04"
+        base="/assets/codescanner/prototyp_04"
         sizes="(min-width: 1760px) 1720px, 100vw"
         alt="Der rote Faden"
         className="rounded-xl border border-line-subtle w-full mt-10 sm:mt-14"

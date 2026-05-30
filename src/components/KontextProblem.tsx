@@ -24,7 +24,7 @@ export const KontextProblem = () => (
       </div>
       <div className="rounded-2xl overflow-hidden ">
         <ResponsiveImg
-          base="assets/codescanner/kontext"
+          base="/assets/codescanner/kontext"
           sizes="(min-width: 1024px) 45vw, 100vw"
           alt="Kontext und Problem"
           className="w-full"

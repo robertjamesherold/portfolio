@@ -8,12 +8,12 @@ const statCards = [
 
 const personas = [
   {
-    name: 'Alex (28)', role: 'Junior Frontend Developer', img: 'assets/codescanner/alex.avif',
+    name: 'Alex (28)', role: 'Junior Frontend Developer', img: '/assets/codescanner/alex.avif',
     quote: 'KI-Code spart mir Zeit – aber ich weiß oft nicht, ob ich ihm vertrauen kann.',
     desc: 'Nutzt KI als tägliches Werkzeug, hat aber Unsicherheiten beim Bewerten der Ausgaben. Braucht klare Erklärungen und Handlungsführung statt langer Findings-Listen.',
   },
   {
-    name: 'Sarah (34)', role: 'Senior Frontend Developer & Tech Lead', img: 'assets/codescanner/sarah.avif',
+    name: 'Sarah (34)', role: 'Senior Frontend Developer & Tech Lead', img: '/assets/codescanner/sarah.avif',
     quote: 'KI-Output ist eine Diskussionsgrundlage – nicht die Antwort.',
     desc: 'Sieht KI-Code als Diskussionsgrundlage und braucht effiziente Risiko-Triage für ihr Team. Erwartet Severity-Stufen, Kontext und priorisierte nächste Schritte.',
   },

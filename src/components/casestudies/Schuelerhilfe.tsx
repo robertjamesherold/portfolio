@@ -39,14 +39,14 @@ export const Schuelerhilfe = () => (
       visual={
         <div className="rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
           <video
-            src="assets/av-medien/animatic.mp4"
+            src="/assets/av-medien/animatic.mp4"
             autoPlay
             muted
             
             playsInline
             controls
             preload="metadata"
-            poster="assets/av-medien/schlüsselmoment_01.avif"
+            poster="/assets/av-medien/schlüsselmoment_01.avif"
             className="block w-full h-auto"
             style={{ aspectRatio: '16/9' }}
           />
@@ -74,7 +74,7 @@ export const Schuelerhilfe = () => (
 
       <div className="mt-12 rounded-2xl overflow-hidden border border-line-subtle bg-grouped-1">
         <img
-          src="assets/av-medien/plot.avif"
+          src="/assets/av-medien/plot.avif"
           alt="Plot-Übersicht mit Drei-Akt-Struktur"
           loading="lazy"
           decoding="async"
@@ -109,7 +109,7 @@ export const Schuelerhilfe = () => (
               className="rounded-xl overflow-hidden border border-line-subtle bg-grouped-1"
             >
               <img
-                src={`assets/av-medien/drehbuch_0${n}.avif`}
+                src={`/assets/av-medien/drehbuch_0${n}.avif`}
                 alt={`Drehbuch Seite ${n}`}
                 loading="lazy"
                 decoding="async"
@@ -136,7 +136,7 @@ export const Schuelerhilfe = () => (
               className="rounded-xl overflow-hidden border border-line-subtle bg-grouped-1"
             >
               <img
-                src={`assets/av-medien/szene_${num}.avif`}
+                src={`/assets/av-medien/szene_${num}.avif`}
                 alt={`Storyboard Szene ${i + 1}`}
                 decoding="async"
                 className="block w-full h-auto"
@@ -185,7 +185,7 @@ export const Schuelerhilfe = () => (
             className="rounded-xl overflow-hidden border border-line-subtle bg-grouped-1"
           >
             <img
-              src={`assets/av-medien/schlüsselmoment_0${n}.avif`}
+              src={`/assets/av-medien/schlüsselmoment_0${n}.avif`}
               alt={`Animatic – Schlüsselmoment ${n}`}
               loading="lazy"
               decoding="async"
