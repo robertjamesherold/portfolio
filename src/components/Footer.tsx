@@ -7,8 +7,17 @@ export const Footer = () => {
     <footer className="border-t border-line-subtle bg-bg">
       <div className="mx-auto max-w-[1760px] px-6 sm:px-10 lg:px-20 py-10 sm:py-12">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div className="text-ink-3 text-[14px]">
-            &copy; {currentYear} Robert James Herold
+          <div className="flex items-center gap-3 text-ink-3 text-[14px]">
+            <img
+              src="/favicon.svg"
+              alt=""
+              aria-hidden="true"
+              data-no-zoom
+              width={24}
+              height={24}
+              className="w-6 h-6 shrink-0"
+            />
+            <span>&copy; {currentYear} Robert James Herold. All rights reserved.</span>
           </div>
 
           <nav className="flex items-center gap-6 text-[14px]">

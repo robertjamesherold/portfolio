@@ -26,7 +26,7 @@ export const IterativerProzess = () => (
       sub="Vom ersten explorativen Prototyp bis zum finalen Konzept entstanden vier vollständige Versionen – jede mit eigener Stärken-Schwächen-Analyse, dokumentiert und kritisch bewertet."
     />
 
-    <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 mb-16">
+    <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
       {versions.map((v) => (
         <Card key={v.v} className="flex flex-col gap-3 p-7">
           <span className={`self-start inline-flex items-center justify-center px-2.5 py-1 rounded-md mono text-[12px] font-semibold border ${toneTag[v.tone]}`}>
@@ -42,47 +42,45 @@ export const IterativerProzess = () => (
       ))}
     </div>
 
-    <figure className="flex justify-center">
-      <ResponsiveImg
-        base="assets/codescanner/iteration_01"
-        sizes="(min-width: 1760px) 1720px, 100vw"
-        alt="Iterativer Prozess Diagramm"
-        className="w-full"
-        data-no-zoom
-      />
-    </figure>
-
     <Subheading>Entwicklung des Prototyps</Subheading>
-    <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-      <Card className="flex flex-col gap-4 p-6">
-        <div className="inline-flex gap-2 items-center text-[12px] font-semibold">
-          <span className="w-2.5 h-2.5 rounded-full bg-crit shadow-[0_0_8px_#FB2C36]" />
-          <span className="mono text-crit">Variante 1</span>
-        </div>
+    <div className="grid xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-10 items-start">
+      <figure className="m-0">
         <ResponsiveImg
-          base="assets/codescanner/iteration_02"
-          sizes="(min-width: 768px) 50vw, 100vw"
-          alt="Variante 1"
-          className="rounded-lg border border-line-subtle"
+          base="assets/codescanner/iteration_01"
+          sizes="(min-width: 1280px) 50vw, 100vw"
+          alt="Iterativer Prozess Diagramm"
+          className="w-full"
+          data-no-zoom
         />
-        <p className="text-ink-3 text-sm">Exploratives Modul-Layout. Sieben Bereiche, kein klarer Einstiegspunkt.</p>
-      </Card>
-      <Card className="flex flex-col gap-4 p-6">
-        <div className="inline-flex gap-2 items-center text-[12px] font-semibold">
-          <span className="w-2.5 h-2.5 rounded-full bg-ok shadow-[0_0_8px_#BCF85B]" />
-          <span className="mono text-ok">Variante 4</span>
-        </div>
-        <ResponsiveImg
-          base="assets/codescanner/iteration_03"
-          sizes="(min-width: 768px) 50vw, 100vw"
-          alt="Variante 4"
-          className="rounded-lg border border-line-subtle"
-        />
-        <p className="text-ink-3 text-sm">Geführter Workflow-Einstieg. Drei Bereiche, ein empfohlener nächster Schritt.</p>
-      </Card>
+      </figure>
+      <div className="grid md:grid-cols-2 xl:grid-cols-1 gap-6 sm:gap-8">
+        <Card className="flex flex-col gap-4 p-6">
+          <div className="inline-flex gap-2 items-center text-[12px] font-semibold">
+            <span className="w-2.5 h-2.5 rounded-full bg-crit shadow-[0_0_8px_#FB2C36]" />
+            <span className="mono text-crit">Variante 1</span>
+          </div>
+          <ResponsiveImg
+            base="assets/codescanner/iteration_02"
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+            alt="Variante 1"
+            className="rounded-lg border border-line-subtle"
+          />
+          <p className="text-ink-3 text-sm">Exploratives Modul-Layout. Sieben Bereiche, kein klarer Einstiegspunkt.</p>
+        </Card>
+        <Card className="flex flex-col gap-4 p-6">
+          <div className="inline-flex gap-2 items-center text-[12px] font-semibold">
+            <span className="w-2.5 h-2.5 rounded-full bg-ok shadow-[0_0_8px_#BCF85B]" />
+            <span className="mono text-ok">Variante 4</span>
+          </div>
+          <ResponsiveImg
+            base="assets/codescanner/iteration_03"
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+            alt="Variante 4"
+            className="rounded-lg border border-line-subtle"
+          />
+          <p className="text-ink-3 text-sm">Geführter Workflow-Einstieg. Drei Bereiche, ein empfohlener nächster Schritt.</p>
+        </Card>
+      </div>
     </div>
-    <Caption>
-      Vom explorativen Modul-Layout zum geführten Workflow-Einstieg – sichtbar wird die konzeptionelle Verdichtung über vier Iterationen.
-    </Caption>
   </section>
 );

@@ -83,9 +83,20 @@ export const TopNav = () => {
                 navigate('/');
               }
             }}
-            className="font-bold tracking-tightish text-base sm:text-lg"
+            aria-label="Robert James Herold — Startseite"
+            className="flex items-center gap-2.5 sm:gap-3"
           >
-            Robert James Herold
+            <img
+              src="/favicon.svg"
+              alt=""
+              aria-hidden="true"
+              width={32}
+              height={32}
+              className="w-7 h-7 sm:w-8 sm:h-8 shrink-0"
+            />
+            <span className="font-bold tracking-tightish text-base sm:text-lg">
+              Robert James Herold
+            </span>
           </a>
 
           <ul className="hidden md:flex ml-auto gap-9 text-[15px] text-ink-2 items-center">
