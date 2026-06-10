@@ -1,4 +1,4 @@
-import { navigate } from '../lib/router';
+import { navigate } from '../../lib/router';
 
 export const Impressum = () => (
   <section className="container-x pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-28">
